@@ -1,0 +1,40 @@
+{
+  "name": "jsc-sample-hardhat-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint:sol": "solhint 'contracts/**/*.sol'",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "compile": "hardhat compile",
+    "node": "hardhat node",
+    "deploy:all:hardhat": "hardhat run scripts/deploy-contracts.ts --network hardhat",
+    "deploy:all:kaigan": "hardhat run scripts/deploy-contracts.ts --network kaigan",
+    "mint:kaigan": "hardhat run scripts/mint.ts --network kaigan",
+    "getBalance:kaigan": "hardhat run scripts/getBalance.ts --network kaigan",
+    "transfer:kaigan": "hardhat run scripts/transfer.ts --network kaigan"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "A Hardhat project with Mizuhiki compliant ERC20 contracts",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
+    "eslint": "^9.35.0",
+    "hardhat": "^2.26.1",
+    "solhint": "^6.0.0",
+    "solidity-coverage": "^0.8.16",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^17.2.1"
+  }
+}
